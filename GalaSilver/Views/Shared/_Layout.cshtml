@@ -4,23 +4,23 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" asp-href-include="/dist/css/**/*.min.css"/>
+    <link rel="stylesheet" href="dist/scss/main.css"/>
     <title>@ViewBag.Title</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
   </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 @* Header *@
 <div class="px-3 py-2 text-white" style="background-color: #4C5454">
   <div class="container">
     <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-      <a href="/" class="d-flex align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
+      <a href="/" class="d-flex col-md-auto col-sm-12 align-items-center my-2 my-lg-0 me-lg-auto text-white text-decoration-none">
         <img src="/dist/images/gsicon.svg" height="64" width="64" alt="no image"/>
         <h1>GalaSilver</h1>
       </a>
 
-      <ul class="nav col-12 col-lg-auto my-2 justify-content-center my-md-0 text-small">
+      <ul class="nav col-12 offset-md-2 col-lg-auto my-2 justify-content-center my-md-0 text-small">
         <li>
-          <a href="#" class="nav-link text-secondary">
+          <a href="#" class="nav-link text-white">
             <svg  xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-house d-block mx-auto mb-1" viewBox="0 0 16 16">
               <path fill-rule="evenodd" d="M2 13.5V7h1v6.5a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5V7h1v6.5a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 13.5zm11-11V6l-2-2V2.5a.5.5 0 0 1 .5-.5h1a.5.5 0 0 1 .5.5z"/>
               <path fill-rule="evenodd" d="M7.293 1.5a1 1 0 0 1 1.414 0l6.647 6.646a.5.5 0 0 1-.708.708L8 2.207 1.354 8.854a.5.5 0 1 1-.708-.708L7.293 1.5z"/>
@@ -30,26 +30,38 @@
         </li>
         <li>
           <a href="#" class="nav-link text-white">
-            <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#speedometer2"></use></svg>
-            Dashboard
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-basket2 d-block mx-auto mb-1" viewBox="0 0 16 16">
+              <path d="M4 10a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 0 1 2 0v2a1 1 0 0 1-2 0v-2zm3 0a1 1 0 1 1 2 0v2a1 1 0 0 1-2 0v-2z"/>
+              <path d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15.5a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-.623l-1.844 6.456a.75.75 0 0 1-.722.544H3.69a.75.75 0 0 1-.722-.544L1.123 8H.5a.5.5 0 0 1-.5-.5v-1A.5.5 0 0 1 .5 6h1.717L5.07 1.243a.5.5 0 0 1 .686-.172zM2.163 8l1.714 6h8.246l1.714-6H2.163z"/>
+            </svg>
+            Товары
           </a>
         </li>
         <li>
           <a href="#" class="nav-link text-white">
-            <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#table"></use></svg>
-            Orders
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-info-circle d-block mx-auto mb-1" viewBox="0 0 16 16">
+              <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+              <path d="m8.93 6.588-2.29.287-.082.38.45.083c.294.07.352.176.288.469l-.738 3.468c-.194.897.105 1.319.808 1.319.545 0 1.178-.252 1.465-.598l.088-.416c-.2.176-.492.246-.686.246-.275 0-.375-.193-.304-.533L8.93 6.588zM9 4.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+            О Нас
           </a>
         </li>
         <li>
           <a href="#" class="nav-link text-white">
-            <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#grid"></use></svg>
-            Products
+           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-box-arrow-in-right d-block mx-auto mb-1" viewBox="0 0 16 16">
+             <path fill-rule="evenodd" d="M6 3.5a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-2a.5.5 0 0 0-1 0v2A1.5 1.5 0 0 0 6.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-8A1.5 1.5 0 0 0 5 3.5v2a.5.5 0 0 0 1 0v-2z"/>
+             <path fill-rule="evenodd" d="M11.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H1.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+           </svg>
+            Войти
           </a>
         </li>
         <li>
           <a href="#" class="nav-link text-white">
-            <svg class="bi d-block mx-auto mb-1" width="24" height="24"><use xlink:href="#people-circle"></use></svg>
-            Customers
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-person-bounding-box d-block mx-auto mb-1" viewBox="0 0 16 16">
+              <path d="M1.5 1a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-1 0v-3A1.5 1.5 0 0 1 1.5 0h3a.5.5 0 0 1 0 1h-3zM11 .5a.5.5 0 0 1 .5-.5h3A1.5 1.5 0 0 1 16 1.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 1-.5-.5zM.5 11a.5.5 0 0 1 .5.5v3a.5.5 0 0 0 .5.5h3a.5.5 0 0 1 0 1h-3A1.5 1.5 0 0 1 0 14.5v-3a.5.5 0 0 1 .5-.5zm15 0a.5.5 0 0 1 .5.5v3a1.5 1.5 0 0 1-1.5 1.5h-3a.5.5 0 0 1 0-1h3a.5.5 0 0 0 .5-.5v-3a.5.5 0 0 1 .5-.5z"/>
+              <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm8-9a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+            </svg>
+            Регистрация
           </a>
         </li>
       </ul>
@@ -59,6 +71,44 @@
 
 @RenderBody()
 
-<script asp-src-include="/dist/js/**/*.min.js"></script>
+<div class="footer mt-auto" style="background-color: #4C5454">
+  <div class="container">
+    <footer class="row row-cols-md-3 row-cols-sm-1 py-5 mt-5 text-white">
+      <div class="col-md col-sm">
+        <h4 class="text-center">Навигация</h4>
+        <ul class="nav flex-column align-content-center">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Главная</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Товары</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">О Нас</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Регистрация</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Вход</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md col-sm">
+        <h4 class="text-center">Контакты</h4>
+        <ul class="nav flex-column align-content-center">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">ВКонтакте</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Telegram</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Youtube</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">WhatsApp</a></li>
+        </ul>
+      </div>
+
+      <div class="col-md col-sm">
+        <h4 class="text-center">Рекомендуем</h4>
+        <ul class="nav flex-column align-content-center">
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Подарочная карта</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Ломбард</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Обмен</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Рассылка</a></li>
+          <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-white">Скидки</a></li>
+        </ul>
+      </div>
+    </footer>
+    <p class="text-center text-white border-top">© 2022 Алексеев</p>
+  </div>
+</div>
+<script asp-src-include="/dist/bootstrap/js/**/*.min.js"></script>
 </body>
 </html>
