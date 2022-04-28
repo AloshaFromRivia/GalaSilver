@@ -1,0 +1,35 @@
+﻿@model IEnumerable<Product>
+
+@{
+    ViewBag.Title = "Каталог";
+    Layout = "_Layout";
+}
+
+<div class="container">
+  <form class="bg-secondary text-white p-2 rounded-bottom" method="get" asp-action="Catalog" enctype="multipart/form-data">
+    <div class="form-group row mb-2">
+      <label class="col-sm-2 col-form-label">Поиск</label>
+      <div class="col-sm-10 btn-group">
+        <input type="text" name="searchString" class="form-control" id="searchString">
+        <button type="submit" class="btn btn-danger text-white">Поиск</button>
+        <a class="btn btn-outline-danger text-white" asp-controller="Home" asp-action="Clear">Очистить</a>
+      </div>
+    </div>
+    <fieldset class="form-group">
+      <div class="row row-cols-md-6 row-cols-sm-3">
+        <legend class="col-form-label col-sm-2 pt-0">Категории</legend>
+        <div class="col-sm-10">
+          <input type="radio" class="btn-check" name="categoryId" id="success-outlined" value="-1" checked>
+          <label class="btn btn-outline-danger btn-sm text-white" for="success-outlined">Все</label>
+        </div>
+      </div>
+    </fieldset>
+  </form>
+  
+    <div class="row row-cols-md-4 row-cols-sm-2 mt-2">
+       @foreach (Product item in @Model)
+       {
+         @await Html.PartialAsync("ProductSummary",item);
+       }
+    </div>
+</div>
