@@ -3,6 +3,7 @@
 public interface IRepository
 {
     IQueryable<Product> Products { get;}
+    IQueryable<Category> Categories { get; }
     void Add(Product product);
-    void Remove(long id);
+    void Remove(Product product);
 }

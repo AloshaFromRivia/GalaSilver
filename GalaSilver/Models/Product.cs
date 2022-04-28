@@ -11,17 +11,17 @@ public record Product
     [Required]
     public  long Id { get; set; }
     [Required(ErrorMessage = "Нет названия")]
-    [MaxLength(20)]
+    [MaxLength(40)]
     [DisplayName("Название")]
     public string? Name { get; set; }
     [DisplayName("Описание товара")]
     [MaxLength(255)]
     public string? Description { get; set; }
     [Required(ErrorMessage = "Отсутствует категория товара")]
-    [ForeignKey("Category")]
     [DisplayName("Id категории")]
+    [ForeignKey("Category")]
     public long CategoryId { get; set; }
-    public Category? Category { get; set; }
+    public Category Category { get; set; }
     [Required(ErrorMessage = "Отсутствует цена")]
     [DisplayName("Цена")]
     public decimal Price { get; set; }

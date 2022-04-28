@@ -1,6 +1,5 @@
 using GalaSilver.Models;
 using Microsoft.EntityFrameworkCore;
-using MySqlConnector;
 
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +9,7 @@ ConfigurationManager configuration = builder.Configuration;
 //Добавление MVC сервисов
 builder.Services.AddControllersWithViews(options => options.EnableEndpointRouting=false);
 //Dependency injection 
-builder.Services.AddTransient<IRepository, ProductRepository>();
+builder.Services.AddTransient<IRepository, EfRepository>();
 
 builder.Services.AddDbContext<ApplicationDbContext>(optionsBuilder =>
     optionsBuilder.UseMySql(

@@ -9,6 +9,5 @@ public record Category
     public long Id { get; set; }
     [Required(ErrorMessage = "Нет названия категории")]
     [MaxLength(30)]
-    [DisplayName("Название категории")]
     public string? Name { get; set; }
 }
