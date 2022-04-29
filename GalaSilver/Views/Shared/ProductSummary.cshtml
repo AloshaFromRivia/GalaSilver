@@ -8,15 +8,21 @@
             <p class="card-text">@Model.Description</p>
             <p class="card-text">@Model.Price.ToString("C0")</p>
         </div>
-        <div class="card-footer">
-               @if (@Model.Stock == Stock.InStock)
-               {
-                    <a href="#" class="btn btn-danger text-white my-auto">В корзину</a>
-               }
-               else
+        <form id="@Model.Id" asp-action="AddToCart"
+              asp-controller="Cart" method="post">
+            <input type="hidden" asp-for="Id" />
+            <input type="hidden" name="returnUrl"
+                   value="@ViewContext.HttpContext.Request.PathAndQuery()"/>
+            <div class="card-footer">
+                @if (@Model.Stock == Stock.InStock)
+                {
+                    <button asp-controller="Cart" asp-action="AddToCart" class="btn btn-danger text-white my-auto">В корзину</button>
+                }
+                else
                 {
                     <a href="#" class="btn btn-danger disabled text-white">Нет в наличии</a>
                 }
-        </div>
+            </div>
+        </form>
     </div>
 </div>
